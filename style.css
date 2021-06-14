@@ -20,6 +20,19 @@ body {
 .grid-mobile {
   display: none;
 }
+.mobile-view {
+  display: block;
+  /* transform:translateX(2500px)"; */
+}
+.ham {
+  display: none;
+}
+.close {
+  display: none;
+}
+.mobile-logo {
+  display: none;
+}
 .main-container {
   background: url(./images/desktop/image-hero.jpg) no-repeat center center/cover;
   max-height: 100vh;
@@ -196,7 +209,26 @@ img {
 .btn-mobile {
   display: none;
 }
+.bottom-link {
+  margin-bottom: 0px;
+}
 @media screen and (max-width: 760px) {
+  body {
+    position: relative;
+    height: 100vh;
+    /* overflow-y: hidden; */
+  }
+  .ham {
+    display: block;
+    cursor: pointer;
+  }
+  .close {
+    display: block;
+    cursor: pointer;
+  }
+  .mobile-logo {
+    display: block;
+  }
   .main-container {
     background: url(./images/mobile/image-hero.jpg);
     background-position: center center;
@@ -204,9 +236,55 @@ img {
     background-repeat: no-repeat;
     padding: 20px 25px;
   }
-  .nav-bar {
-    display: none;
+  .mobile-view {
+    position: absolute;
+    background-color: black;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 20px;
+    /* justify-content: start; */
+    /* align-items: flex-start; */
+    /* padding: 0px 500px; */
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateX(-1000px);
+
+    /* display: none; */
   }
+  .close {
+    width: 20px;
+    height: 20px;
+    transform: translateY(20px);
+  }
+
+  .link {
+    font-size: px;
+    /* font-weight: 100; */
+    /* transform: translateX(-90%); */
+  }
+  .mobile-logo {
+    margin-bottom: 140px;
+    color: #fff;
+  }
+  .m-link {
+    font-size: 30px;
+    font-weight: 100;
+    /* font-family: "Alata", sans-serif; */
+    margin-bottom: 20px;
+    color: var(--DarkGray);
+  }
+  .nav-bar,
+  .nav-click {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
   .main-box {
     display: flex;
     flex-direction: column;
@@ -214,6 +292,7 @@ img {
     /* justify-content: center; */
     /* align-items: center; */
     width: 100%;
+    height: 100%;
   }
   .second-container {
     padding: 100px 20px 20px 20px;
@@ -303,13 +382,14 @@ img {
     text-align: center;
     transform: translateX(15px);
   }
-  .link {
-    margin-bottom: 10px;
-  }
+
   .copy-right {
     color: var(--DarkGray);
     font-size: 13px;
     transform: translateY(0px);
+  }
+  .bottom-link {
+    margin-bottom: 20px;
   }
   .social-icons {
     margin-top: 20px;
