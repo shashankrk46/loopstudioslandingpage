@@ -18,4 +18,6 @@ function showNavLinks() {
 function closeNavLinks() {
   mobileView.style.transform = "translateX(-1000px)";
   document.body.style["overflow-y"] = "auto";
+  // close.style.transform = "rotate(360deg)";
+  // close.style.transition = "all 0.9s ease-out";
 }
