@@ -6,8 +6,6 @@ const navBar = document.querySelector(".nav-bar");
 const mobileLogo = document.querySelector(".mobile-logo");
 const mobileLink = document.querySelectorAll(".m-link");
 
-console.log(mobileLink.forEach(e => console.log(e)));
-
 ham.addEventListener("click", showNavLinks);
 close.addEventListener("click", closeNavLinks);
 
